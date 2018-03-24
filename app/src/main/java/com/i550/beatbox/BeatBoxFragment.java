@@ -86,4 +86,3 @@ public class BeatBoxFragment extends Fragment {
         mBeatBox.release();
     }
 }
-//git 24.03.2018
