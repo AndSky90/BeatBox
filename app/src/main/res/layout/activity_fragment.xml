@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+     android:layout_width="match_parent"
+    android:orientation="vertical">
+
 <FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_container"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
     tools:context="com.i550.beatbox.BeatBoxActivity"
-    >
+    />
+<TextView
+    android:id="@+id/playback_speed"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:text="@string/speeds"/>
+<SeekBar
+    android:tag="Playback speed"
+    android:id="@+id/speed_seekbar"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:max="50"
+    />
 
-</FrameLayout>
+</LinearLayout>

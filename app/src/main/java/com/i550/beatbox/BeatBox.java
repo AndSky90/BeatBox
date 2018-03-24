@@ -16,7 +16,7 @@ public class BeatBox {
     private static final String TAG = "BeatBox";
     private static final String SOUNDS_FOLDER = "sample_sounds";
     private static final int MAX_SOUNDS = 5;
-
+    public static float rate = 1.0f;
     private AssetManager mAssets;
     private SoundPool mSoundPool;   //класс для работы с большими обьемами звуков (встроенный)
     private List<Sound> mSounds = new ArrayList<>();
@@ -51,9 +51,11 @@ public class BeatBox {
     public void play(Sound sound){
         Integer soundId = sound.getSoundId();
         if(soundId==null){return;}
-        mSoundPool.play(soundId,1.0f,1.0f,1,0,1.0f);
+        mSoundPool.play(soundId,1.0f,1.0f,1,0,rate);
     }
-
+    public static void setRate(float mrate){
+        rate=mrate;
+    }
     public void release(){
         mSoundPool.release();
     }

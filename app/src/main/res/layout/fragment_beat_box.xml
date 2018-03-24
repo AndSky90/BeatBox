@@ -2,23 +2,8 @@
 
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-    <SeekBar
-        android:tag="Playback speed"
-        android:id="@+id/speed_seekbar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:min="35"
-        android:max="200"/>
-
-    </LinearLayout>
+            android:layout_height="match_parent" />
 </layout>
